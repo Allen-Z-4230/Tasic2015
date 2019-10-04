@@ -1,0 +1,58 @@
+@prefix : <file:///ERROR/EMPTY/PREFIX/BANNED/> .
+@prefix ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/> .
+@prefix NCBIGene: <http://www.ncbi.nlm.nih.gov/gene/> .
+@prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix SAO: <http://uri.neuinfo.org/nif/nifstd/sao> .
+@prefix TEMP: <http://uri.interlex.org/temp/uris/> .
+@prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/tasic-2015.ttl> a owl:Ontology ;
+    owl:imports <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/phenotype-core.ttl>,
+        <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/phenotypes.ttl> ;
+    prov:wasGeneratedBy <https://github.com/tgbugs/pyontutils/blob/06f79f3925a3385d9f8965f3a4f7fa16e7596d2e/neurondm/neurondm/core.py#L1016> .
+
+### Classes
+
+TEMP:0-p1-NCBITaxon-10090-0-p5-UBERON-0002436 a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf (
+                    SAO:1417703748
+                    [ a owl:Restriction ;
+                        owl:onProperty ilxtr:hasInstanceInSpecies ;
+                        owl:someValuesFrom NCBITaxon:10090 ]
+                    [ a owl:Restriction ;
+                        owl:onProperty ilxtr:hasSomaLocatedIn ;
+                        owl:someValuesFrom UBERON:0002436 ] ) ] ;
+    rdfs:label "Mus musculus V1 neuron" ;
+    ilxtr:genLabel "Mus musculus V1 neuron" ;
+    ilxtr:localLabel "Mouse V1 neuron" .
+
+TEMP:0-p1-NCBITaxon-10090-0-p5-UBERON-0002436-0-p17-NCBIGene-78892-1-p17-NCBIGene-18167 a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf (
+                    ilxtr:NeuronTasic2015
+                    [ a owl:Class ;
+                        owl:complementOf [ a owl:Restriction ;
+                                owl:onProperty ilxtr:hasExpressionPhenotype ;
+                                owl:someValuesFrom NCBIGene:18167 ] ]
+                    [ a owl:Restriction ;
+                        owl:onProperty ilxtr:hasExpressionPhenotype ;
+                        owl:someValuesFrom NCBIGene:78892 ]
+                    [ a owl:Restriction ;
+                        owl:onProperty ilxtr:hasInstanceInSpecies ;
+                        owl:someValuesFrom NCBITaxon:10090 ]
+                    [ a owl:Restriction ;
+                        owl:onProperty ilxtr:hasSomaLocatedIn ;
+                        owl:someValuesFrom UBERON:0002436 ] ) ] ;
+    rdfs:label "Mus musculus V1 +Crispld2 -Npy2r neuron (Tasic2015)" ;
+    ilxtr:genLabel "Mus musculus V1 +Crispld2 -Npy2r neuron (Tasic2015)" ;
+    ilxtr:localLabel "Mouse V1 +Crispld2 -Npy2r neuron (Tasic2015)" ;
+    ilxtr:origLabel "A200_V" .
+
+### Serialized using the pyontutils deterministic serializer v1.2.0

@@ -1,0 +1,531 @@
+"gene_id","gene","marker_name","gene_order"
+107200,"Fam19a1","All Cells",1
+11850,"Bdnf","All Cells",2
+107340,"Cadps2","All Cells",3
+12275,"Cd34","All Cells",4
+131950,"Atp6ap1l","All Cells",5
+20379,"Snca","All Cells",6
+1031791,"Ccl27b","All Cells",7
+12136,"Car4","All Cells",8
+50183,"Lrrtm1","All Cells",9
+107435,"Tmem215","All Cells",10
+49125,"Ddit4l","All Cells",11
+160102,"Plb1","All Cells",12
+82848,"Rspo1","All Cells",13
+20039,"Scnn1a","All Cells",14
+86335,"Rorb","All Cells",15
+86816,"Cbln4","All Cells",16
+11531,"Anxa11","All Cells",17
+21099,"Tacr3","All Cells",18
+108864,"Thsd7a","All Cells",19
+23721,"Pacsin2","All Cells",20
+21761,"Tpm2","All Cells",21
+21154,"Tcap","All Cells",22
+73431,"Mybpc1","All Cells",23
+32798,"Pdlim3","All Cells",24
+13380,"Sparcl1","All Cells",25
+21094,"Tac1","All Cells",26
+88419,"Kcns3","All Cells",27
+69514,"Akr1c18","All Cells",28
+22188,"Wt1","All Cells",29
+84238,"Tbc1d4","All Cells",30
+14356,"Gfap","All Cells",31
+13843,"F3","All Cells",32
+60821,"Acsbg1","All Cells",33
+14385,"Gja1","All Cells",34
+86357,"Opalin","All Cells",35
+17209,"Mog","All Cells",36
+18372,"Enpp2","All Cells",37
+16965,"Mbp","All Cells",38
+12821,"Ctss","All Cells",39
+12045,"C1qb","All Cells",40
+106838,"9630013A20Rik","All Cells",41
+11975,"Brca1","All Cells",42
+18547,"Pla2g4a","All Cells",43
+107916,"Enpp6","All Cells",44
+14059,"Fosb","All Cells",45
+18361,"Pdgfra","All Cells",46
+12095,"Calca","All Cells",47
+106340,"D430036J16Rik","All Cells",48
+12741,"Cryba2","All Cells",49
+53467,"Efcab6","All Cells",50
+12301,"Cd7","All Cells",51
+11631,"Arf5","All Cells",52
+86115,"Lemd2","All Cells",53
+12489,"Cited1","All Cells",54
+42289,"Exosc7","All Cells",55
+44369,"Ucma","All Cells",56
+46676,"Prss22","All Cells",57
+18988,"Ptgs2","All Cells",58
+52300,"Car12","All Cells",59
+82371,"Syt12","All Cells",60
+12616,"Col6a1","All Cells",61
+92460,"Samd3","All Cells",62
+42404,"2310042E22Rik","All Cells",63
+86844,"Qrfpr","All Cells",64
+40873,"Ngb","All Cells",65
+14089,"Fst","All Cells",66
+74215,"Syt17","All Cells",67
+58004,"Otof","All Cells",68
+22150,"Wfs1","All Cells",69
+36032,"Tacstd2","All Cells",70
+75055,"Chrna2","All Cells",71
+17652,"Myh8","All Cells",72
+14554,"Gpx3","All Cells",73
+88659,"Cpne5","All Cells",74
+12079,"Cacna2d3","All Cells",75
+109371,"Nell1","All Cells",76
+52858,"Col25a1","All Cells",77
+13200,"Dnase1l3","All Cells",78
+15341,"Htr7","All Cells",79
+15918,"Igtp","All Cells",80
+12001,"Bsg","All Cells",81
+13394,"Edn3","All Cells",82
+20512,"Spp1","All Cells",83
+16722,"Anxa1","All Cells",84
+63102,"Myl9","All Cells",85
+13185,"Dmp1","All Cells",86
+85011,"Efemp1","All Cells",87
+11897,"Bgn","All Cells",88
+12356,"Cdk6","All Cells",89
+160751,"Gm8267","All Cells",90
+87065,"Ttc39a","All Cells",91
+17686,"Myo5b","All Cells",92
+13267,"Drd1a","All Cells",93
+21582,"Th","All Cells",94
+88569,"Rspo2","All Cells",95
+17972,"Ntf3","All Cells",96
+44737,"Rasl11a","All Cells",97
+18296,"Pcdh8","All Cells",98
+47581,"Pvrl4","All Cells",99
+23710,"Nt5e","All Cells",100
+88382,"Tusc5","All Cells",101
+21097,"Tacr1","All Cells",102
+89073,"Lrrc61","All Cells",103
+89950,"Obox3","All Cells",104
+129907,"Sgpp2","All Cells",105
+92463,"Scml4","All Cells",106
+12832,"Cx3cr1","All Cells",107
+29550,"Bcar3","All Cells",108
+14510,"Gpc3","All Cells",109
+16886,"Mab21l1","All Cells",110
+17611,"Mup5","All Cells",111
+18282,"Pbx3","All Cells",112
+21793,"Traip","All Cells",113
+11229,"Chrna6","All Cells",114
+18532,"Pkib","All Cells",115
+15258,"Hsd11b1","All Cells",116
+62168,"Deptor","All Cells",117
+120160,"Batf3","All Cells",118
+17663,"Myl4","All Cells",119
+75040,"Gabra5","All Cells",120
+13786,"Etv1","All Cells",121
+37828,"Il1rapl2","All Cells",122
+88557,"Plcxd3","All Cells",123
+26683,"St6galnac5","All Cells",124
+47545,"Arhgef3","All Cells",125
+21801,"Trh","All Cells",126
+40736,"Tnmd","All Cells",127
+68246,"Nxph4","All Cells",128
+13996,"Ctgf","All Cells",129
+18318,"Pcsk5","All Cells",130
+18339,"Pde1a","All Cells",131
+16838,"Ly6d","All Cells",133
+76994,"Foxp2","All Cells",134
+17082,"Mgp","All Cells",135
+21740,"Tpbg","All Cells",136
+84202,"Thsd7b","All Cells",137
+33817,"Syt10","All Cells",138
+80217,"Caln1","All Cells",139
+89298,"Tnfaip8l3","All Cells",140
+88851,"Pde11a","All Cells",141
+108770,"Frem1","All Cells",142
+20380,"Sncg","All Cells",143
+76557,"Egln3","All Cells",144
+54732,"Crispld2","All Cells",145
+120460,"Ppapdc1a","All Cells",146
+12701,"Crh","All Cells",147
+21095,"Tac2","All Cells",148
+22110,"Vip","All Cells",149
+11606,"Nr2f2","All Cells",150
+12584,"Cnr1","All Cells",151
+17922,"Pnoc","All Cells",152
+16363,"Kit","All Cells",153
+36542,"Cxcl14","All Cells",154
+47570,"Rgs12","All Cells",155
+88931,"Slc44a5","All Cells",156
+12297,"Cd63","All Cells",157
+35592,"Nupr1","All Cells",158
+12432,"Chat","All Cells",159
+11355,"Aebp1","All Cells",160
+17934,"Npy2r","All Cells",161
+20270,"Slc18a3","All Cells",162
+12339,"Cdh13","All Cells",163
+49014,"Pcdh18","All Cells",164
+73806,"Npy","All Cells",165
+48534,"Zcchc12","All Cells",166
+42796,"Cdca7","All Cells",167
+14581,"Grik1","All Cells",168
+16645,"Lhx6","All Cells",169
+12637,"Cort","All Cells",170
+14181,"Gabrg1","All Cells",171
+17878,"Nnat","All Cells",172
+84854,"Gpr126","All Cells",173
+14643,"Gstm6","All Cells",174
+35458,"Bace2","All Cells",175
+42658,"Ccdc109b","All Cells",176
+87114,"Hcrtr1","All Cells",177
+27101,"Insl6","All Cells",178
+41177,"Ndst4","All Cells",179
+88694,"Gpr151","All Cells",180
+16440,"Krt18","All Cells",181
+33681,"Sit1","All Cells",182
+89578,"Chodl","All Cells",183
+17892,"Nos1","All Cells",184
+160102,"Plb1","Excitatory",1
+20039,"Scnn1a","Excitatory",2
+1031791,"Ccl27b","Excitatory",3
+82848,"Rspo1","Excitatory",4
+11850,"Bdnf","Excitatory",5
+11531,"Anxa11","Excitatory",6
+50183,"Lrrtm1","Excitatory",7
+107200,"Fam19a1","Excitatory",8
+23721,"Pacsin2","Excitatory",9
+107435,"Tmem215","Excitatory",10
+49125,"Ddit4l","Excitatory",11
+13786,"Etv1","Excitatory",12
+18339,"Pde1a","Excitatory",13
+88557,"Plcxd3","Excitatory",15
+75040,"Gabra5","Excitatory",16
+17663,"Myl4","Excitatory",17
+120160,"Batf3","Excitatory",18
+18532,"Pkib","Excitatory",19
+15258,"Hsd11b1","Excitatory",20
+62168,"Deptor","Excitatory",21
+40736,"Tnmd","Excitatory",22
+21801,"Trh","Excitatory",23
+68246,"Nxph4","Excitatory",24
+13996,"Ctgf","Excitatory",25
+16838,"Ly6d","Excitatory",26
+76994,"Foxp2","Excitatory",27
+17082,"Mgp","Excitatory",28
+21793,"Traip","Excitatory",29
+12339,"Cdh13","Excitatory",30
+17878,"Nnat","Excitatory",31
+106340,"D430036J16Rik","Excitatory",32
+17611,"Mup5","Excitatory",33
+11229,"Chrna6","Excitatory",34
+16722,"Anxa1","Excitatory",35
+18988,"Ptgs2","Excitatory",36
+52300,"Car12","Excitatory",37
+82371,"Syt12","Excitatory",38
+12616,"Col6a1","Excitatory",39
+44369,"Ucma","Excitatory",40
+46676,"Prss22","Excitatory",41
+11631,"Arf5","Excitatory",42
+86115,"Lemd2","Excitatory",43
+12741,"Cryba2","Excitatory",44
+12301,"Cd7","Excitatory",45
+12489,"Cited1","Excitatory",46
+40873,"Ngb","Excitatory",47
+14089,"Fst","Excitatory",48
+22150,"Wfs1","Excitatory",49
+58004,"Otof","Excitatory",50
+18372,"Enpp2","Excitatory",51
+74215,"Syt17","Excitatory",52
+92460,"Samd3","Excitatory",53
+86844,"Qrfpr","Excitatory",54
+42404,"2310042E22Rik","Excitatory",55
+13380,"Sparcl1","Excitatory",56
+18318,"Pcsk5","Excitatory",57
+13394,"Edn3","Inhibitory",1
+107340,"Cadps2","Inhibitory",2
+76557,"Egln3","Inhibitory",3
+20380,"Sncg","Inhibitory",4
+108770,"Frem1","Inhibitory",5
+53467,"Efcab6","Inhibitory",6
+20379,"Snca","Inhibitory",7
+89298,"Tnfaip8l3","Inhibitory",8
+42404,"2310042E22Rik","Inhibitory",9
+12275,"Cd34","Inhibitory",10
+131950,"Atp6ap1l","Inhibitory",11
+88851,"Pde11a","Inhibitory",12
+17922,"Pnoc","Inhibitory",13
+80217,"Caln1","Inhibitory",14
+12701,"Crh","Inhibitory",15
+22110,"Vip","Inhibitory",16
+54732,"Crispld2","Inhibitory",17
+47570,"Rgs12","Inhibitory",18
+36542,"Cxcl14","Inhibitory",19
+21095,"Tac2","Inhibitory",20
+120460,"Ppapdc1a","Inhibitory",21
+16363,"Kit","Inhibitory",22
+11606,"Nr2f2","Inhibitory",23
+12584,"Cnr1","Inhibitory",24
+12432,"Chat","Inhibitory",25
+11355,"Aebp1","Inhibitory",26
+20270,"Slc18a3","Inhibitory",27
+16886,"Mab21l1","Inhibitory",28
+17934,"Npy2r","Inhibitory",29
+12136,"Car4","Inhibitory",30
+14510,"Gpc3","Inhibitory",31
+29550,"Bcar3","Inhibitory",32
+88931,"Slc44a5","Inhibitory",33
+18282,"Pbx3","Inhibitory",34
+27101,"Insl6","Inhibitory",35
+35458,"Bace2","Inhibitory",36
+42658,"Ccdc109b","Inhibitory",37
+84854,"Gpr126","Inhibitory",38
+89578,"Chodl","Inhibitory",39
+87114,"Hcrtr1","Inhibitory",40
+14181,"Gabrg1","Inhibitory",41
+17892,"Nos1","Inhibitory",42
+14643,"Gstm6","Inhibitory",43
+88694,"Gpr151","Inhibitory",44
+16440,"Krt18","Inhibitory",45
+33681,"Sit1","Inhibitory",46
+73806,"Npy","Inhibitory",47
+12637,"Cort","Inhibitory",48
+41177,"Ndst4","Inhibitory",49
+52858,"Col25a1","Inhibitory",50
+15918,"Igtp","Inhibitory",51
+15341,"Htr7","Inhibitory",52
+84202,"Thsd7b","Inhibitory",53
+21097,"Tacr1","Inhibitory",54
+13200,"Dnase1l3","Inhibitory",55
+21154,"Tcap","Inhibitory",56
+47545,"Arhgef3","Inhibitory",57
+21094,"Tac1","Inhibitory",58
+88419,"Kcns3","Inhibitory",59
+69514,"Akr1c18","Inhibitory",60
+13267,"Drd1a","Inhibitory",61
+73431,"Mybpc1","Inhibitory",62
+21761,"Tpm2","Inhibitory",63
+22188,"Wt1","Inhibitory",64
+129907,"Sgpp2","Inhibitory",65
+21099,"Tacr3","Inhibitory",66
+37828,"Il1rapl2","Inhibitory",67
+21740,"Tpbg","Inhibitory",68
+13786,"Etv1","Inhibitory",69
+23710,"Nt5e","Inhibitory",70
+88382,"Tusc5","Inhibitory",71
+87065,"Ttc39a","Inhibitory",72
+16645,"Lhx6","Inhibitory",73
+17686,"Myo5b","Inhibitory",74
+42796,"Cdca7","Inhibitory",75
+32798,"Pdlim3","Inhibitory",76
+109371,"Nell1","Inhibitory",77
+88659,"Cpne5","Inhibitory",78
+12079,"Cacna2d3","Inhibitory",79
+49014,"Pcdh18","Inhibitory",80
+18339,"Pde1a","Inhibitory",81
+86816,"Cbln4","Inhibitory",82
+44737,"Rasl11a","Inhibitory",83
+108864,"Thsd7a","Inhibitory",84
+18296,"Pcdh8","Inhibitory",85
+75055,"Chrna2","Inhibitory",86
+26683,"St6galnac5","Inhibitory",87
+17652,"Myh8","Inhibitory",88
+14554,"Gpx3","Inhibitory",89
+85011,"Efemp1","Inhibitory",90
+12356,"Cdk6","Inhibitory",91
+160751,"Gm8267","Inhibitory",92
+47581,"Pvrl4","Inhibitory",93
+33817,"Syt10","Inhibitory",94
+14059,"Fosb","Inhibitory",95
+89073,"Lrrc61","Inhibitory",96
+60821,"Acsbg1","Inhibitory",97
+89950,"Obox3","Inhibitory",98
+92463,"Scml4","Inhibitory",99
+36032,"Tacstd2","Inhibitory",100
+18547,"Pla2g4a","Inhibitory",101
+12095,"Calca","Inhibitory",102
+14581,"Grik1","Inhibitory",103
+21582,"Th","Inhibitory",104
+20512,"Spp1","Inhibitory",105
+13185,"Dmp1","Inhibitory",106
+88569,"Rspo2","Inhibitory",107
+17972,"Ntf3","Inhibitory",108
+1031791,"Ccl27b","Neuronal",1
+107340,"Cadps2","Neuronal",2
+20379,"Snca","Neuronal",3
+131950,"Atp6ap1l","Neuronal",4
+12275,"Cd34","Neuronal",5
+107200,"Fam19a1","Neuronal",6
+11850,"Bdnf","Neuronal",7
+160102,"Plb1","Neuronal",8
+50183,"Lrrtm1","Neuronal",9
+12136,"Car4","Neuronal",10
+20039,"Scnn1a","Neuronal",11
+82848,"Rspo1","Neuronal",12
+49125,"Ddit4l","Neuronal",13
+107435,"Tmem215","Neuronal",14
+86816,"Cbln4","Neuronal",15
+11531,"Anxa11","Neuronal",16
+18988,"Ptgs2","Neuronal",17
+52300,"Car12","Neuronal",18
+82371,"Syt12","Neuronal",19
+12616,"Col6a1","Neuronal",20
+40873,"Ngb","Neuronal",21
+14089,"Fst","Neuronal",22
+74215,"Syt17","Neuronal",23
+18372,"Enpp2","Neuronal",24
+58004,"Otof","Neuronal",25
+22150,"Wfs1","Neuronal",26
+92460,"Samd3","Neuronal",27
+42404,"2310042E22Rik","Neuronal",28
+86844,"Qrfpr","Neuronal",29
+21793,"Traip","Neuronal",30
+11229,"Chrna6","Neuronal",31
+18282,"Pbx3","Neuronal",32
+16722,"Anxa1","Neuronal",33
+17611,"Mup5","Neuronal",34
+89950,"Obox3","Neuronal",35
+129907,"Sgpp2","Neuronal",36
+44369,"Ucma","Neuronal",37
+46676,"Prss22","Neuronal",38
+12489,"Cited1","Neuronal",39
+60821,"Acsbg1","Neuronal",40
+29550,"Bcar3","Neuronal",41
+16886,"Mab21l1","Neuronal",42
+15918,"Igtp","Neuronal",43
+88659,"Cpne5","Neuronal",44
+12079,"Cacna2d3","Neuronal",45
+12095,"Calca","Neuronal",46
+106340,"D430036J16Rik","Neuronal",47
+11631,"Arf5","Neuronal",48
+86115,"Lemd2","Neuronal",49
+14059,"Fosb","Neuronal",50
+12741,"Cryba2","Neuronal",51
+53467,"Efcab6","Neuronal",52
+12301,"Cd7","Neuronal",53
+47581,"Pvrl4","Neuronal",54
+23710,"Nt5e","Neuronal",55
+88382,"Tusc5","Neuronal",56
+21097,"Tacr1","Neuronal",57
+89073,"Lrrc61","Neuronal",58
+13185,"Dmp1","Neuronal",59
+13200,"Dnase1l3","Neuronal",60
+15341,"Htr7","Neuronal",61
+36032,"Tacstd2","Neuronal",62
+18547,"Pla2g4a","Neuronal",63
+92463,"Scml4","Neuronal",64
+21582,"Th","Neuronal",65
+20512,"Spp1","Neuronal",66
+85011,"Efemp1","Neuronal",67
+12356,"Cdk6","Neuronal",68
+160751,"Gm8267","Neuronal",69
+75055,"Chrna2","Neuronal",70
+17652,"Myh8","Neuronal",71
+120460,"Ppapdc1a","Neuronal",72
+18532,"Pkib","Neuronal",73
+15258,"Hsd11b1","Neuronal",74
+62168,"Deptor","Neuronal",75
+37828,"Il1rapl2","Neuronal",76
+13786,"Etv1","Neuronal",77
+26683,"St6galnac5","Neuronal",78
+17663,"Myl4","Neuronal",79
+120160,"Batf3","Neuronal",80
+21801,"Trh","Neuronal",81
+40736,"Tnmd","Neuronal",82
+68246,"Nxph4","Neuronal",83
+13996,"Ctgf","Neuronal",84
+18318,"Pcsk5","Neuronal",85
+18339,"Pde1a","Neuronal",86
+80217,"Caln1","Neuronal",88
+33817,"Syt10","Neuronal",89
+75040,"Gabra5","Neuronal",90
+16838,"Ly6d","Neuronal",91
+76994,"Foxp2","Neuronal",92
+17082,"Mgp","Neuronal",93
+21740,"Tpbg","Neuronal",94
+84202,"Thsd7b","Neuronal",95
+89298,"Tnfaip8l3","Neuronal",96
+88851,"Pde11a","Neuronal",97
+13394,"Edn3","Neuronal",98
+76557,"Egln3","Neuronal",99
+20380,"Sncg","Neuronal",100
+108770,"Frem1","Neuronal",101
+54732,"Crispld2","Neuronal",102
+16363,"Kit","Neuronal",103
+47570,"Rgs12","Neuronal",104
+36542,"Cxcl14","Neuronal",105
+21095,"Tac2","Neuronal",106
+17922,"Pnoc","Neuronal",107
+11606,"Nr2f2","Neuronal",108
+12584,"Cnr1","Neuronal",109
+88931,"Slc44a5","Neuronal",110
+14510,"Gpc3","Neuronal",111
+12701,"Crh","Neuronal",112
+17934,"Npy2r","Neuronal",113
+22110,"Vip","Neuronal",114
+12432,"Chat","Neuronal",115
+11355,"Aebp1","Neuronal",116
+20270,"Slc18a3","Neuronal",117
+88569,"Rspo2","Neuronal",118
+17972,"Ntf3","Neuronal",119
+22188,"Wt1","Neuronal",120
+21761,"Tpm2","Neuronal",121
+21154,"Tcap","Neuronal",122
+47545,"Arhgef3","Neuronal",123
+87065,"Ttc39a","Neuronal",124
+17686,"Myo5b","Neuronal",125
+13267,"Drd1a","Neuronal",126
+88557,"Plcxd3","Neuronal",127
+73431,"Mybpc1","Neuronal",128
+32798,"Pdlim3","Neuronal",129
+21094,"Tac1","Neuronal",130
+69514,"Akr1c18","Neuronal",131
+88419,"Kcns3","Neuronal",132
+13380,"Sparcl1","Neuronal",133
+21099,"Tacr3","Neuronal",134
+108864,"Thsd7a","Neuronal",135
+23721,"Pacsin2","Neuronal",136
+17878,"Nnat","Neuronal",137
+14643,"Gstm6","Neuronal",138
+88694,"Gpr151","Neuronal",139
+16440,"Krt18","Neuronal",140
+33681,"Sit1","Neuronal",141
+14181,"Gabrg1","Neuronal",142
+17892,"Nos1","Neuronal",143
+87114,"Hcrtr1","Neuronal",144
+89578,"Chodl","Neuronal",145
+42658,"Ccdc109b","Neuronal",146
+27101,"Insl6","Neuronal",147
+41177,"Ndst4","Neuronal",148
+35458,"Bace2","Neuronal",149
+84854,"Gpr126","Neuronal",150
+14554,"Gpx3","Neuronal",151
+14581,"Grik1","Neuronal",152
+42796,"Cdca7","Neuronal",153
+12339,"Cdh13","Neuronal",154
+16645,"Lhx6","Neuronal",155
+73806,"Npy","Neuronal",156
+12637,"Cort","Neuronal",157
+44737,"Rasl11a","Neuronal",158
+18296,"Pcdh8","Neuronal",159
+109371,"Nell1","Neuronal",160
+49014,"Pcdh18","Neuronal",161
+52858,"Col25a1","Neuronal",162
+12832,"Cx3cr1","Non-Neuronal",1
+12821,"Ctss","Non-Neuronal",2
+12045,"C1qb","Non-Neuronal",3
+16965,"Mbp","Non-Neuronal",4
+86357,"Opalin","Non-Neuronal",5
+17209,"Mog","Non-Neuronal",6
+107916,"Enpp6","Non-Neuronal",7
+106838,"9630013A20Rik","Non-Neuronal",8
+11975,"Brca1","Non-Neuronal",9
+18361,"Pdgfra","Non-Neuronal",10
+48534,"Zcchc12","Non-Neuronal",11
+12297,"Cd63","Non-Neuronal",12
+14356,"Gfap","Non-Neuronal",13
+86335,"Rorb","Non-Neuronal",14
+14385,"Gja1","Non-Neuronal",15
+13843,"F3","Non-Neuronal",16
+35592,"Nupr1","Non-Neuronal",17
+11897,"Bgn","Non-Neuronal",18
+63102,"Myl9","Non-Neuronal",19
+42289,"Exosc7","Non-Neuronal",20
+84238,"Tbc1d4","Non-Neuronal",21
+12001,"Bsg","Non-Neuronal",22
