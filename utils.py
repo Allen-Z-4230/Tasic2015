@@ -50,18 +50,18 @@ def get_node(tree, pos):
 def cluster_converter(row, tree = None):
     """Function for pandas apply. Converts cluster_id into its position on
     the dendrogram based on least common acestor.
-    
+
     row: DataFrame, single row of data
     tree: AnyTree, tree containing the dendrogram
     """
     if row['coretype'] == 'Core':
-        target_node = anytree.search.findall_by_attr(tree, row['primary'], 
+        target_node = anytree.search.findall_by_attr(tree, row['primary'],
                                     name='cluster_id')[0]
 
     elif row['coretype'] == 'Transition': #transition clusters
-        n1 = anytree.search.findall_by_attr(tree, row['primary'], 
+        n1 = anytree.search.findall_by_attr(tree, row['primary'],
                                     name='cluster_id')[0]
-        n2 = anytree.search.findall_by_attr(tree, row['secondary'], 
+        n2 = anytree.search.findall_by_attr(tree, row['secondary'],
                                     name='cluster_id')[0]
         target_node = anytree.util.commonancestors(n1, n2)[-1]
 
@@ -70,7 +70,7 @@ def cluster_converter(row, tree = None):
 def gene_merge(row, df = None, index = 'markers_present'):
     """Function for pandas apply. Converts cluster_id into its position on
     the dendrogram based on least common acestor.
-    
+
     row: DataFrame, single row of data
     df: DataFrame, dataframe that store the gene data.
     index: 'markers_present' or 'gene_absent'
@@ -81,7 +81,7 @@ def gene_merge(row, df = None, index = 'markers_present'):
             gene_set = set()
         else:
             gene_set = set(cell.str.split(",").tolist()[0])
-            
+
     elif row['coretype'] == 'Transition':
         cell1 = df[df['cluster_id'] == row['primary']][index]
         cell2 = df[df['cluster_id'] == row['secondary']][index]
@@ -97,7 +97,7 @@ def gene_merge(row, df = None, index = 'markers_present'):
             gene_set = set()
         elif index == 'genes_absent':
             gene_set = gene_set1.union(gene_set2)
-        
+
     return gene_set
 
 def ncbigenemapping(may_need_ncbigene_added, return_errors = False):
