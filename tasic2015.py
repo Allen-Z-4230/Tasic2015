@@ -20,7 +20,7 @@ from anytree.exporter import DotExporter
 # custom imports
 from neurondm import *
 from pyontutils.core import simpleOnt
-from neurondm.models.huang2017 import Genes #FIXME: This is failing
+from neurondm.models.huang2017 import Genes  # FIXME: This is failing
 from pyontutils.namespaces import ilxtr as pred
 from neurondm import phenotype_namespaces as phns
 from nifstd.nifstd_tools.utils import ncbigenemapping
@@ -56,7 +56,7 @@ df_types = df_types[['short_name', 'coretype', 'primary', 'secondary',
 
 ###############################################################################
 
-#create breath-first binary search tree with tasic clusters
+# create breath-first binary search tree with tasic clusters
 tree_dict = {'label': 'root'}  # base dictionary
 
 # parses binary node positions into a dictionary with tree structure
@@ -73,6 +73,8 @@ for ind, node in enumerate(anytree.LevelOrderIter(tree)):
     else:
         node.name = str(ind + 1)
 
+DotExporter(tree).to_picture("dendro.png")
+
 for leaf in tree.leaves:  # TODO: phenotypes & deal with mismatching
     # edge cases for the last two endothelial cells
     if leaf.label == 'Endo Tbc1d4':
@@ -85,7 +87,7 @@ for leaf in tree.leaves:  # TODO: phenotypes & deal with mismatching
 
 ###############################################################################
 
-#Reads in computed molecular phenotypes (cluster & genes)
+# Reads in computed molecular phenotypes (cluster & genes)
 df_types['cluster'] = df_types.apply(cluster_converter, tree=tree, axis=1)
 df_types['markers_present'] = df_types.apply(gene_merge, df=df_cls_mtd,
                                              index='markers_present', axis=1)
@@ -94,33 +96,35 @@ df_types['markers_absent'] = df_types.apply(gene_merge, df=df_cls_mtd,
 
 ###############################################################################
 
+# Extracts cre line information from a variety of tables
 response = requests.get('http://api.brain-map.org/api/v2/data/query.json?criteria='
                         'model::TransgenicLine,rma::options[num_rows$eqall]')
 cre_ref = pd.DataFrame(response.json()['msg'])
 cre_ref['stock_number'] = pd.to_numeric(cre_ref['stock_number'])
 
-#creates final cre metadata based on a name merge & a stock number merge
-cre_df1 = pd.merge(df_cre_mtd, cre_ref,  how='inner',
-                   left_on='Driver Line',right_on = 'name')
+# creates final cre metadata based on a name merge & a stock number merge
+cre_df1 = pd.merge(df_cre_mtd, cre_ref, how='inner',
+                   left_on='Driver Line', right_on='name')
 
-cre_df2 = pd.merge(df_cre_mtd.dropna(subset = ['Public Repository Stock #']),
-                   cre_ref.dropna(subset = ['stock_number']),  how='inner',
+cre_df2 = pd.merge(df_cre_mtd.dropna(subset=['Public Repository Stock #']),
+                   cre_ref.dropna(subset=['stock_number']), how='inner',
                    left_on='Public Repository Stock #',
-                   right_on = 'stock_number')
+                   right_on='stock_number')
 
-#drop duplicates
-cre_df1.drop_duplicates(inplace = True)
-cre_df2.drop_duplicates(inplace = True)
-cre_df = pd.concat([cre_df1, cre_df2], axis = 0)
-cre_df.drop_duplicates(inplace = True)
+# drop duplicates
+cre_df1.drop_duplicates(inplace=True)
+cre_df2.drop_duplicates(inplace=True)
+cre_df = pd.concat([cre_df1, cre_df2], axis=0)
+cre_df.drop_duplicates(inplace=True)
 
-#reorder
-cre_df = cre_df[['Abbreviation','name', 'id', 'stock_number',
+# reorder
+cre_df = cre_df[['Abbreviation', 'name', 'id', 'stock_number',
                  'transgenic_line_source_name',
                  'transgenic_line_type_name',
-                 'url_prefix', 'url_suffix','description']]
+                 'url_prefix', 'url_suffix', 'description']]
 
 ###############################################################################
+
 
 class Tasic2015(Genes, phns.Species,
                 phns.Regions, phns.Layers):
@@ -266,19 +270,18 @@ class TasicBagger:
         with Tasic2015:
             # Every neuron sampled in this paper is from V1
             with Neuron(phns.Species.Mouse, phns.Regions.V1) as context:
-                #self.build_transgenic_lines()
+                self.build_transgenic_lines()
                 for row in self.data.itertuples():
                     label = str(row.short_name)  # change this
                     cluster_phn = TasicBagger.cluster_parse(row.cluster)
                     layer_phn = TasicBagger.layer_parse(row.layer_dissectoin)
-                    cre_phn = None #FIX after building the cre lines
+                    cre_phn = None  # FIX after building the cre lines
 
                     present_phns = TasicBagger.gene_parse(row.markers_present, mode='present')
                     absent_phns = TasicBagger.gene_parse(row.markers_absent, mode='absent')
                     markers_phns = present_phns + absent_phns
 
                     phenotypes = [layer_phn, cre_phn, cluster_phn] + markers_phns
-                    phenotypes = markers_phns
                     yield label, phenotypes
 
 
@@ -286,10 +289,11 @@ class TasicNeuron(NeuronEBM):
     owlClass = ilxtr.NeuronTasic2015
     shortname = 'Tasic2015'
 
-def main(stop = None):
+
+def main(stop=None):
     setattr(Phenotype._predicates,
             'hasComputedMolecularPhenotype',
-            ilxtr.hasComputedMolecularPhenotype)  #adds the custom phenotype
+            ilxtr.hasComputedMolecularPhenotype)  # adds the custom phenotype
     metadata = {"cre": cre_df}
     ttl_test_path = '/mnt/c/Users/allen/Desktop/Neuron/Tasic2015/ttl_export'
     config = Config("tasic-2015", ttl_export_dir=Path(ttl_test_path))
@@ -304,4 +308,6 @@ def main(stop = None):
     config.write()
     config.write_python()
 
-main()
+
+if __name__ == '__main__':
+    main(stop=2)

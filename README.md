@@ -2,26 +2,32 @@
 
 ## Project-level:
 
-- Generation of Cell names
-- names for higher subclasses
-- penotypic & Genotypic -- Check threshold
+- Document sources of data !
 
---------------------------------------------------------------------------------
+### Interpretations & Assumptions:
 
-- Start building from individual neurons
-- Naming scheme: Tasic 15, cluster [cluster_number]
-- Function that changes names flexibly
-- Templates & References
+- Layer VI was separated into two sub-compartments a and b, these are assumed to be computationally significant, though we are not certain what metric was used to divide the layer.
 
-  - Bolser Lewis
-  - OntTerm triplesimple
-  - nistd/core.py
-  - curation.py = triplesExport
+- Cells classified with a "transition" core type were ambiguous.
+
+  - Markers present was discarded for these cells
+  - Markers absent was the union of absent markers in their categories
+
+- "NEG" cre-lines are modeled as complement of (hasProteinExpr, someDriveLine)
 
 ## Code-level:
 
 - cre line code should now be fixed, build it w/ NEG phenotypes
-- output unmapped gene list for debugging -
+
+- lots of mismatched cre-line names, examine & fix
+
+- output unmapped gene list for debugging, new function
+
+- Layer and computed phenotypes are not serializing when running batch, change code accordingly (use hasComputedMolecularPhenotypeFromRNA)
+
+- Implement threading/multiprocessing OR run them on the server
+
+- Read the codebase when possible
 
 Definitive phenotype:
 
@@ -46,16 +52,7 @@ Inferred gene markers phenotype
 
 --------------------------------------------------------------------------------
 
-## Interpretations & Assumptions:
-
-- Layer VI was separated into two sub-compartments a and b, these are assumed to be computationally significant, though we are not certain what metric was used to divide the layer.
-
-- Cells classified with a "transition" core type were ambiguous.
-
-  - Markers present was discarded for these cells
-  - Markers absent was the union of absent markers in their categories
-
-## Useful Links
+## Resources
 
 1. The neurons branch<br>
   <https://github.com/SciCrunch/NIF-Ontology/tree/neurons/ttl><br>
@@ -88,19 +85,17 @@ Inferred gene markers phenotype
   - <http://casestudies.brain-map.org/celltax>
   - <https://www.nature.com/articles/nn.4216>
 
+5. Codebase:
+
+  - Bolser Lewis
+  - OntTerm triplesimple
+  - nistd/core.py
+  - curation.py = triplesExport
+
 --------------------------------------------------------------------------------
 
 Meeting (10/10)
 
-1. Error when importing genes from Huang2017 - fixed
-2. Some cre-lines & genes are not able to be mapped:
-
-  - Neg Cre Lines: complement of (hasProteinExpression, someDriveLine)
-
-3. somehow the layers are not serializing - fixed
-
-  - NVM, they are serializing correctly
-
-4. Have a good way to document the source of the data (csv, xlsx, etc)
+4.
 
 --------------------------------------------------------------------------------
