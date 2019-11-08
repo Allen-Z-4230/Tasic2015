@@ -198,8 +198,7 @@ class TasicBagger:
             else:
                 undef.add(gene)
         if len(undef) > 0:  # FIXME: some genes cannot be mapped
-            mappings, to_add, errors = ncbigenemapping(undef,
-                                                       return_errors=True)
+            mappings, to_add, errors = ncbigenemapping(undef)
             for gene_name, iri in mappings.items():
                 gene_phns.append(f(iri, ilxtr.hasExpressionPhenotype,
                                    label=gene_name, override=True))
@@ -281,7 +280,8 @@ class TasicBagger:
                     absent_phns = TasicBagger.gene_parse(row.markers_absent, mode='absent')
                     markers_phns = present_phns + absent_phns
 
-                    phenotypes = [layer_phn, cre_phn, cluster_phn] + markers_phns
+                    #phenotypes = [layer_phn, cre_phn, cluster_phn] + markers_phns
+                    phenotypes = [layer_phn, cluster_phn] + markers_phns
                     yield label, phenotypes
 
 

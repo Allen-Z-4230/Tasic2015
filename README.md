@@ -1,8 +1,22 @@
 # Tasic 2015 Neuron Type Ontology
 
-## Project-level:
+## Project-Level Agenda:
 
 - Document sources of data !
+
+## Code To-Dos:
+
+- cre line code should now be fixed, build it w/ NEG phenotypes
+
+- lots of mismatched cre-line names, examine & fix (see meeting notes)
+
+- join all unmapped genes into a list for debugging
+
+- Implement threading/multiprocessing OR run them on the server
+
+  - setup ssh
+
+- Read the codebase when possible
 
 ### Interpretations & Assumptions:
 
@@ -15,19 +29,7 @@
 
 - "NEG" cre-lines are modeled as complement of (hasProteinExpr, someDriveLine)
 
-## Code-level:
-
-- cre line code should now be fixed, build it w/ NEG phenotypes
-
-- lots of mismatched cre-line names, examine & fix
-
-- output unmapped gene list for debugging, new function
-
-- Layer and computed phenotypes are not serializing when running batch, change code accordingly (use hasComputedMolecularPhenotypeFromRNA)
-
-- Implement threading/multiprocessing OR run them on the server
-
-- Read the codebase when possible
+--------------------------------------------------------------------------------
 
 Definitive phenotype:
 
@@ -94,8 +96,15 @@ Inferred gene markers phenotype
 
 --------------------------------------------------------------------------------
 
-Meeting (10/10)
+Meeting (11/8)
 
-4.
+Issues
+
+- Cres
+- sfn meeting summaries
+
+Outline:
+
+- Missing/Mismatched Cre lines are a result of typos/double-crossed lines/ minor string differences.
 
 --------------------------------------------------------------------------------
