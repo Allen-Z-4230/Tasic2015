@@ -11,7 +11,7 @@ def name_mapping(major_class, major_dissectoin, sub_class):  # New Names for hie
 
 
 def parse_binary(mydict, bin_str, leaf_name):
-    """Parses binary leaf nodes into python dictionary
+    """Parses binary node position codes into python dictionary
 
     mydict: dict, root dictionary to parse through
     bin_str: str, string of binary characters
@@ -47,6 +47,7 @@ def parse_binary(mydict, bin_str, leaf_name):
 def get_node(tree, pos):
     """gets node based on position
        pos: int, breadth-first node position
+
     """
     return anytree.search.findall(tree, filter_=lambda node: node.pos == pos)[0]
 

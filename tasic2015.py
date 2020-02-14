@@ -3,6 +3,7 @@ from pyontutils.closed_namespaces import rdf, rdfs, owl
 from pyontutils.namespaces import makePrefixes, ilxtr, definition
 from pathlib import Path
 import requests
+import re
 
 # extended libraries
 import numpy as np
@@ -130,7 +131,7 @@ class Tasic2015(Genes, phns.Species,
                 phns.Regions, phns.Layers):
     branch = devconfig.neurons_branch
 
-    # TODO: Ambiguous, most likely post-clustering layers
+    # NOTE: Ambiguous, most likely post-clustering layers
     L6a = Phenotype(ilxtr.TasicL6a, ilxtr.hasSomaLocatedIn,
                     label="Tasic Layer VI - A", override=True)
     L6b = Phenotype(ilxtr.TasicL6b, ilxtr.hasSomaLocatedIn,
@@ -233,6 +234,14 @@ class TasicBagger:
     #     phenotypes.append(Phenotype(iri, pred))
     #     return cre_phn
 
+    ############################################################################
+    # MIGRATED FROM pyontutils.neurondm.models.allen_cell_types
+
+    def avoid_url_conversion(self, string):
+        if not string:
+            return string
+        return re.sub("/| |\(", '_', string).replace(')', '')
+
     def build_transgenic_lines(self):
         triples = []
         for ind, tl in self.cre.iterrows():
@@ -264,12 +273,45 @@ class TasicBagger:
 
         return transgenic_lines
 
+    def transgenic_lines_phenotypes(self):
+        transgenic_mappings = {
+        }
+        phenotypes = []
+        for ind, tl in self.cre.iterrows():
+            prefix = tl['transgenic_line_source_name']
+            suffix = tl['stock_number'] if tl['stock_number'] else str(tl['id'])
+            name = self.avoid_url_conversion(tl['name'])
+            abbrev = tl['Abbreviation']
+            _type = tl['transgenic_line_type_name']
+            if _type == 'driver':
+                if 'CreERT2' in name:  # TODO: do we still need this ?
+                    pred = ilxtr.hasDriverExpressionInducedPhenotype
+                else:
+                    pred = 'ilxtr:hasDriverExpressionPhenotype'
+            elif _type == 'reporter':
+                pred = 'ilxtr:hasReporterExpressionPhenotype'
+            else:
+                pred = 'ilxtr:hasExpressionPhenotype'
+
+            line_names = []
+            if prefix and suffix and prefix in ['AIBS', 'MMRRC', 'JAX']:
+                if prefix == 'AIBS':
+                    prefix = 'AllenTL'
+                iri = self.ns[prefix][str(suffix)]
+                ph = Phenotype(iri, pred)
+                phenotypes.append(ph)  # add to list of phenotypes
+                transgenic_mappings[abbrev] = ph  # add to dictionary of mappings
+        return transgenic_mappings, phenotypes
+
+    ############################################################################
+
     @property
     def bags(self):
         with Tasic2015:
             # Every neuron sampled in this paper is from V1
             with Neuron(phns.Species.Mouse, phns.Regions.V1) as context:
-                self.build_transgenic_lines()
+                transgenic = self.build_transgenic_lines()
+                print(transgenic)
                 for row in self.data.itertuples():
                     label = str(row.short_name)  # change this
                     cluster_phn = TasicBagger.cluster_parse(row.cluster)
@@ -291,9 +333,9 @@ class TasicNeuron(NeuronEBM):
 
 
 def main(stop=None):
-    setattr(Phenotype._predicates,
-            'hasComputedMolecularPhenotype',
-            ilxtr.hasComputedMolecularPhenotype)  # adds the custom phenotype
+    # setattr(Phenotype._predicates,
+    #         'hasComputedMolecularPhenotype',
+    #         ilxtr.hasComputedMolecularPhenotype)  # adds the custom phenotype
     metadata = {"cre": cre_df}
     ttl_test_path = '/mnt/c/Users/allen/Desktop/Neuron/Tasic2015/ttl_export'
     config = Config("tasic-2015", ttl_export_dir=Path(ttl_test_path))

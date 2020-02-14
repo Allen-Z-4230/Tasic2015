@@ -1,37 +1,45 @@
 # Tasic 2015 Neuron Type Ontology
 
-## Project-Level Agenda:
+**Primary Goal**: To convert transcriptomic cell types in the Tasic 2015 Paper into a neuron type ontology. We are adopting a new framework used by NIF which models the neurons as discrete classes with phenotypes as properties.
 
-- Document sources of data !
+Tasic 2015 paper:
 
-## Code To-Dos:
+- 49 transcriptomic cell types, including 23 GABAergic, 19 glutamatergic and 7 non-neuronal types in the mouse **visual cortex**
+- some of our transcriptomic cell types displayed specific and differential electrophysiological and axon projection properties
+- **Single Cell RNA-seq**, which offers single-cell resolutions of gene expression information, allowing for cell-type related analyses
 
-- cre line code should now be fixed, build it w/ NEG phenotypes
+  - isolating one individual cells from a population of cells (tissue sample).
+  - isolate the RNA, convert to cDNA with reverse transcriptase.
+  - Amplification with polymerase chain reaction (PCR)
+  - Sequencing with Next-Generation Sequencing (NGS) or similar techniques (in this case, authors used the SMARTer PCR Protocol)
+  - Transcriptome (genomic features) extracted from template matching or _de novo_ assembly
 
-- lots of mismatched cre-line names, examine & fix (see meeting notes)
+- Used transgenic mice expressive **Cre-Recombinase (cre-lines)**, which can regulate the expression of certain genes at specific locations and times. This can aid studying differential expression as well as genetic influences in development.
 
-- join all unmapped genes into a list for debugging
+  - Cre-drivers: usually named from the gene(s) at their promotor sites
 
-- Implement threading/multiprocessing OR run them on the server
+    - [NIH Cre-Driver Network](www.credrivermice.org/database)
+    - [Jackson Laboratory Cre Database](https://www.jax.org/research-and-faculty/resources/cre-repository/characterized-cre-lines-jax-cre-resource)
+    - [Allen Institute Transgenic Database](https://connectivity.brain-map.org/transgenic)
 
-  - setup ssh
+  - Cre-reporters: molecular markers that can verify that certain genes have been expressed.
 
-- Read the codebase when possible
+- Clustering methods:
 
-### Interpretations & Assumptions:
+  - Used the intersection of **PCA** and iterative weighted gene coexpression network analysis (**WGCNA**)
 
-- Layer VI was separated into two sub-compartments a and b, these are assumed to be computationally significant, though we are not certain what metric was used to divide the layer.
+    - PCA: iteratively finds orthogonal components of the feature space which are linear combinations of genes.
+    - WGCNA: A form of hierarchical clustering which constructs an adjacency matrix as well as proximity measure between them to perform branch cutting. Modules resulting from this network branch cut are then characterized by their eigengene.
 
-- Cells classified with a "transition" core type were ambiguous.
+  - Validation of cluster membership using random forest.
 
-  - Markers present was discarded for these cells
-  - Markers absent was the union of absent markers in their categories
+- Clustering uncovered common broad neuronal categories (matched using cre-layer enrichment, previously known marker genes, and expression profiles) such as excitatory (glutamatergic) vs inhibitory (GABAergic).
 
-- "NEG" cre-lines are modeled as complement of (hasProteinExpr, someDriveLine)
+- In total, 49 transcriptomic types have been identified, each with different expression profiles and marker genes. These are useful for us because they can be cross-referenced with cre-line specific layers. For any given transgenic mice, this would tell us what markers tend to be expressed in each layer.
 
---------------------------------------------------------------------------------
+- In summary, we are capturing the following phenotypes:
 
-Definitive phenotype:
+**Definitive phenotype**:
 
 ```
 - Cre line [NCBI Taxon] [Allen Brain Institute]
@@ -39,7 +47,7 @@ Definitive phenotype:
 - Layer of dissection [UBERON]
 ```
 
-Inferred gene markers phenotype
+**Inferred gene markers phenotype**
 
 ```
 - Cluster ID [ILX]
@@ -49,62 +57,34 @@ Inferred gene markers phenotype
 
 ## For the Future:
 
-- Continuous Phenotypes (gene counts, etc.)
+- Continuous Phenotypes (gene counts, expression profiles, etc.)
 - Phenotype Inheritance in subclasses?
 
 --------------------------------------------------------------------------------
 
-## Resources
+## Interpretations & Assumptions:
 
-1. The neurons branch<br>
-  <https://github.com/SciCrunch/NIF-Ontology/tree/neurons/ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/neuron-development.ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/bridge/neuron-bridge.ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/phenotype-core.ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/phenotypes.ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/generated/neurons/common-usage-types.ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/generated/neurons/allen-cell-types.ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/generated/neurons/huang-2017.ttl><br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/generated/neurons/markram-2015.ttl>
+- Layer VI was separated into two sub-compartments a and b, these are assumed to be computationally significant, though we are not certain what metric was used to divide the layer.
 
-2. Mappings between hbp-cell and the new interlex identifiers.<br>
-  <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/generated/NIF-Neuron-HBP-cell-import.ttl><br>
-  <https://github.com/tgbugs/pyontutils/blob/master/hbp_cell_conv.csv>
+- Cells classified with a "transition" core type were ambiguous.
 
-3. Python code that generates the new neuron ttl files<br>
-  [neurondm/lang.py](https://github.com/tgbugs/pyontutils/blob/master/neurondm/neurondm/lang.py)<br>
-  [neurondm/core.py](https://github.com/tgbugs/pyontutils/blob/master/neurondm/neurondm/core.py)<br>
-  [neurondm/build.py](https://github.com/tgbugs/pyontutils/blob/master/neurondm/neurondm/build.py)<br>
-  [neurondm/models](https://github.com/tgbugs/pyontutils/tree/master/neurondm/neurondm/models)<br>
-  [nlxeol/lift_neuron_triples.py](https://github.com/tgbugs/nlxeol/blob/master/lift_neuron_triples.py)<br>
-  [nifstd/resources/26451489 table 1.csv](https://github.com/tgbugs/pyontutils/blob/master/nifstd/resources/26451489%20table%201.csv)
+  - Markers present was discarded for these cells
+  - Markers absent was the union of absent markers in their categories
 
-4. Papers<br>
-  Markram 2015 [PMID:26451489](https://www.ncbi.nlm.nih.gov/pubmed/26451489)<br>
-  Huang 2017 [PMID:27053207](https://www.ncbi.nlm.nih.gov/pubmed/27053207)<br>
-  Tasic 2015:
+- "NEG" (knock-out) cre-lines are modeled as complement of (hasProteinExpr, someDriveLine)
 
-  - <http://casestudies.brain-map.org/celltax>
-  - <https://www.nature.com/articles/nn.4216>
+- Combination Cre Lines & Mismatches:
 
-5. Codebase:
+  - PvalbD-Slc32a1: Pvalb-T2A-Dre AND Slc32a1-IRES-Cre
 
-  - Bolser Lewis
-  - OntTerm triplesimple
-  - nistd/core.py
-  - curation.py = triplesExport
+  - PvalbF-Gad2: Pvalb-2A-Flpo AND Gad2-IRES-Cre
 
---------------------------------------------------------------------------------
+  - Tac2: Tac2-IRES2-Cre
 
-Meeting (11/8)
+  - Nkx2-1: Nkx2-1-CreERT2
 
-Issues
+  - Ctgf: Ctgf-2A-dgCre
 
-- Cres
-- sfn meeting summaries
+  --------------------------------------------------------------------------------
 
-Outline:
-
-- Missing/Mismatched Cre lines are a result of typos/double-crossed lines/ minor string differences.
-
---------------------------------------------------------------------------------
+## Sources of Data
